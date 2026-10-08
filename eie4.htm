@@ -1,0 +1,108 @@
+<div class="response-content">
+  <h3>Yes—replace the torus/Fourier step by invariant elliptic theory on \(M\)</h3>
+
+  <p>The passage through a torus is not essential to Günther's argument. Its role is merely to provide:</p>
+  <ol>
+    <li>global coordinates, and</li>
+    <li>a convenient translation-invariant inverse of \(\Delta-1\).</li>
+  </ol>
+
+  <p>Both can be replaced intrinsically on \(M\) by choosing a \(G\)-invariant background metric \(\bar g\) (one may simply take the given metric) and using its Laplace–Beltrami operator:</p>
+
+  <p>$$P=(\Delta_{\bar g}-1)^{-1}.$$</p>
+
+  <p>Because \(G\) acts isometrically,</p>
+
+  <p>$$g^*\Delta_{\bar g}=\Delta_{\bar g}g^*,\qquad g^*P=Pg^* \quad (g\in G).$$</p>
+
+  <p>This is exactly the analytic property needed in Günther's factorization. Deane Yang explicitly notes that the global-coordinate/torus presentation can be replaced by a fixed background metric and its Levi–Civita connection; curvature terms introduced this way are lower order and do not alter the proof. See <a href="https://cims.nyu.edu/~yangd/papers/gunther.pdf" target="_blank">Yang's exposition, p. 2</a>. Tao likewise remarks that the torus reduction is a convenience rather than an essential part of the method in his <a href="https://terrytao.wordpress.com/2016/05/11/notes-on-the-nash-embedding-theorem/#more-8918" target="_blank">notes on Nash embedding</a>.</p>
+
+  <h4>The equivariant local Günther lemma</h4>
+
+  <p>Let</p>
+
+  <p>$$u_0:M\longrightarrow V$$</p>
+
+  <p>be a \(G\)-equivariant free immersion, where \(V\) is a finite-dimensional orthogonal \(G\)-representation. Thus</p>
+
+  <p>$$u_0(gx)=\rho(g)u_0(x).$$</p>
+
+  <p>Write a candidate embedding as \(u=u_0+v\). Günther's construction rewrites the isometric-embedding equation as a fixed-point problem</p>
+
+  <p>$$v=\mathcal M(h)+\mathcal B(v,v),$$</p>
+
+  <p>where:</p>
+  <ul>
+    <li>\(h\) is the desired metric correction;</li>
+    <li>\(\mathcal M\) is the zeroth-order right inverse obtained from the freeness of \(u_0\);</li>
+    <li>\(\mathcal B\) is the improved quadratic operator built using \(P=(\Delta_{\bar g}-1)^{-1}\).</li>
+  </ul>
+
+  <p>All ingredients are natural under the \(G\)-action:</p>
+  <ul>
+    <li>\(\nabla^{\bar g}\), \(\Delta_{\bar g}\), and \(P\) commute with \(G\);</li>
+    <li>the pointwise linear algebra defining \(\mathcal M\) from the first and second derivatives of \(u_0\) is \(G\)-equivariant because \(u_0\) is;</li>
+    <li>the contractions use the Euclidean inner product on \(V\), preserved by \(\rho(G)\).</li>
+  </ul>
+
+  <p>Hence, for invariant \(h\),</p>
+
+  <p>$$\mathcal T_h(v):=\mathcal M(h)+\mathcal B(v,v)$$</p>
+
+  <p>preserves the closed Banach subspace</p>
+
+  <p>$$C^{2,\alpha}(M,V)^G = \{v:\ v(gx)=\rho(g)v(x)\}.$$</p>
+
+  <p>The contraction mapping theorem may therefore be applied <strong>inside the invariant subspace</strong>. Equivalently, uniqueness of the small fixed point gives equivariance automatically: if \(v\) is the solution, then</p>
+
+  <p>$$v_g(x):=\rho(g)^{-1}v(gx)$$</p>
+
+  <p>solves the same fixed-point equation, so \(v_g=v\).</p>
+
+  <p>Thus the local perturbation theorem has the equivariant form:</p>
+
+  <blockquote>
+    <p>If \(u_0\) is a \(G\)-equivariant free immersion and \(h\) is a sufficiently small \(G\)-invariant symmetric \(2\)-tensor, then the Günther correction can be chosen \(G\)-equivariantly.</p>
+  </blockquote>
+
+  <p>No averaging of a nonlinear solution is needed—and indeed simply averaging embeddings would not preserve the isometric equation.</p>
+
+  <h4>Globalization</h4>
+
+  <p>The remaining global part of Günther's proof can also be organized equivariantly.</p>
+
+  <ul>
+    <li>Start with a finite \(G\)-slice cover of the compact \(G\)-manifold \(M\).</li>
+    <li>Use a \(G\)-invariant partition of unity.</li>
+    <li>Decompose the metric defect into finitely many corrections supported on \(G\)-saturated families of slice neighborhoods.</li>
+    <li>At each stage, solve the local perturbation problem simultaneously along the whole \(G\)-orbit of a slice. The corrections on translates are defined by the target representation, rather than independently.</li>
+    <li>The contraction argument above ensures compatibility with stabilizers.</li>
+  </ul>
+
+  <p>This is the equivariant analogue of Günther's usual localized iteration. The key point is that one must <strong>synchronize orbitwise local corrections</strong>, not average them after solving.</p>
+
+  <h4>Equivariant free starting embedding</h4>
+
+  <p>A compact Lie group acting smoothly on a compact manifold admits a finite-dimensional equivariant Euclidean embedding. Starting from such an equivariant embedding \(e:M\to W\), compose it with a quadratic/Veronese-type map:</p>
+
+  <p>$$e \mapsto \bigl(e,\, e\otimes e\bigr) \in W\oplus \operatorname{Sym}^2(W).$$</p>
+
+  <p>This is again equivariant, and after using enough quadratic coordinates it is free. Scaling it by a small constant makes it short:</p>
+
+  <p>$$g-u_0^*g_{\mathrm{Euc}}>0.$$</p>
+
+  <p>Then the equivariant Günther iteration corrects the remaining positive defect to zero. Since the initial map is an embedding and the corrections can be kept uniformly small, the final equivariant immersion remains an embedding.</p>
+
+  <h4>Caveat on dimension</h4>
+
+  <p>This gives an equivariant version of Günther's <em>method</em>, but the clean dimension bound in the nonequivariant theorem need not survive if one constructs the initial free map via an arbitrary equivariant embedding and Veronese map: that initial representation can depend on \(G\) and the action.</p>
+
+  <p>The existence statement itself is classical: Moore and Schlafly proved equivariant isometric embeddings for compact manifolds with compact Lie-group actions. A recent overview identifies their result in precisely this setting; see <a href="https://arxiv.org/html/2507.23164v2" target="_blank">Burago–Qiu, introduction</a>.</p>
+
+  <p>There is also recent work that explicitly adapts Günther's machine equivariantly in a cocompact discrete setting: <a href="https://arxiv.org/html/2511.09931" target="_blank">Qiu, <em>On equivariant isometric embeddings of Riemannian manifolds with symmetries</em></a>. That paper obtains Günther's dimension bound for universal covers of compact flat manifolds/Bieberbach actions, using periodic local corrections.</p>
+
+  <p>So the short answer is: <strong>yes</strong>. Replace torus Fourier analysis by the \(G\)-commuting operator \((\Delta_{\bar g}-1)^{-1}\), formulate the fixed point problem on equivariant Hölder spaces, and globalize via a finite \(G\)-slice cover with orbitwise synchronized corrections.</p>
+</div>
+
+<!-- Include MathJax for the formulas to render correctly on your page -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

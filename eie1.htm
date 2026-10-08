@@ -1,0 +1,27 @@
+
+<h3>Notes on constructing approximate embeddings</h3>
+
+Here are some brief notes on how to construct approximate equivariant isometric
+embeddings. Refer to <i>On Equivariant Isometric Embeddings</i> for notation
+and the rest of the proof.
+<p>
+L<sup>2</sup>(M) decomposes into a direct sum of finite-dimensional eigenspaces of D, and G
+acts on each eigenspace, so each eigenspace decomposes into irreducible unitary representations.
+(I am now looking at complex functions, as these will correspond to functions into euclidean space.)
+Let { f<sub>ja</sub> } be a basis for the vector space of the j-th irreducible representation.
+<p>
+Approximate g by &Sigma;<sub>i</sub> dy<sup>i</sup> dy<sup>i</sup> in the C<sup>k</sup>  topology
+<p>
+Let
+z<sup>i</sup> = &Sigma;<sub>ja</sub> c<sub>ija</sub> f<sub>ja</sub>
+approximate y<sup>i</sup> in the C<sup>k+1</sup> topology, and let
+X<sub>iabr</sub> = &Sigma; N<sub>j</sub><sup>-1/2</sup> c<sub>ija</sub> f<sub>jb</sub>
+where the sum is over all j such that the j-th representation is equivalent to r.
+<p>
+Proposition 1. X is equivariant <br>
+2. z<sup>i</sup> = &Sigma;<sub>ar</sub> N<sub>r</sub><sup>1/2</sup> X<sub>iaar</sub> <br>
+3. F(X) = P(&Sigma;<sub>i</sub> dz<sup>i</sup> dz<sup>i</sup>)
+<p>
+It follows from (2) that X is an embedding if z is, which it will be if it approximates y and y is.
+(3) implies that F(X) approximates g in the C<sup>k</sup> topology.
+
